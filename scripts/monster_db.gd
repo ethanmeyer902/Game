@@ -4,9 +4,9 @@ extends Node
 # id is the key you store in RunState.
 var monsters := {
 	"slime_buddy": {
-		"name": "Slime Buddy",
+		"name": "Mush Buddy",
 		"passive": {"type": "bonus_damage", "value": 1},
-		"active": {"type": "spit", "cooldown": 2.5, "damage": 2}
+		"active": {"type": "spore", "cooldown": 2.5, "damage": 2}
 	}
 }
 
