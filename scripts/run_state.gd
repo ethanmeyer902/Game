@@ -11,8 +11,8 @@ var selected_party: Array[String] = []
 
 func start_new_run() -> void:
 	current_floor = 1
-	owned_monsters = ["slime_buddy"]
-	selected_party = ["slime_buddy"]
+	owned_monsters = ["ghost_buddy"]
+	selected_party = ["ghost_buddy"]
 
 func advance_floor() -> void:
 	current_floor += 1

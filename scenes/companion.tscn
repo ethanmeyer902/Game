@@ -1,27 +1,26 @@
 [gd_scene load_steps=5 format=3 uid="uid://ch1tu1r5a1f0b"]
 
 [ext_resource type="Script" uid="uid://bwiu82ty17gb6" path="res://scripts/companion.gd" id="1_y6mwj"]
-[ext_resource type="Texture2D" uid="uid://6ktydgbtu833" path="res://actors/ForestMonsters/Mushroom/Mushroom without VFX/Mushroom-Idle.png" id="2_eol6h"]
 [ext_resource type="PackedScene" uid="uid://dpesbef27le8x" path="res://scenes/buddy_projectile.tscn" id="2_mqvd2"]
+[ext_resource type="Texture2D" uid="uid://cpfpe7whub3bl" path="res://actors/Ghost/Ghost/ghost.png" id="3_eol6h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_eol6h"]
+radius = 8.768631
 
 [node name="Companion" type="Node2D"]
+scale = Vector2(2.75, 2.75)
 script = ExtResource("1_y6mwj")
 projectile_scene = ExtResource("2_mqvd2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_eol6h")
+texture = ExtResource("3_eol6h")
 region_enabled = true
-region_rect = Rect2(0, 0, 80, 64)
+region_rect = Rect2(0, 0, 32, 32)
 
 [node name="HitBox" type="Area2D" parent="." groups=["buddy_hitboxes"]]
-scale = Vector2(2, 2)
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, 9)
-scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_eol6h")

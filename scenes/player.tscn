@@ -1,18 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://dftrpkfy22rxb"]
 
 [ext_resource type="Script" uid="uid://devotvw5qyy0b" path="res://scripts/player.gd" id="1_3vyb7"]
-[ext_resource type="Texture2D" uid="uid://1d7eexj3bkmg" path="res://icon.svg" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://du8bs0pwxwsvv" path="res://actors/Human/Human Base/human_base.png" id="2_g2els"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u8vuu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vyb7"]
 
 [node name="Player" type="CharacterBody2D"]
+scale = Vector2(3, 3)
 script = ExtResource("1_3vyb7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("2_g2els")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_u8vuu")

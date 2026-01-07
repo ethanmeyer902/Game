@@ -3,8 +3,8 @@ extends Node
 # Very small starter database.
 # id is the key you store in RunState.
 var monsters := {
-	"slime_buddy": {
-		"name": "Mush Buddy",
+	"ghost_buddy": {
+		"name": "Ghost Buddy",
 		"passive": {"type": "bonus_damage", "value": 1},
 		"active": {"type": "spore", "cooldown": 2.5, "damage": 2}
 	}

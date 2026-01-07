@@ -1,25 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://dpesbef27le8x"]
 
 [ext_resource type="Script" uid="uid://b8a2ct7hmye4v" path="res://scripts/projectile.gd" id="1_ipiyc"]
-[ext_resource type="Texture2D" uid="uid://bbg1fh4vq8pnk" path="res://art/flames/Flame_full_sheet.png" id="2_6oxh6"]
+[ext_resource type="Texture2D" uid="uid://cpfpe7whub3bl" path="res://actors/Ghost/Ghost/ghost.png" id="2_ipiyc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_q3m7n"]
 radius = 4.1231055
 
 [node name="BuddyProjectile" type="Area2D" groups=["projectile", "projectiles"]]
 z_index = 1
+scale = Vector2(3, 3)
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_ipiyc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(2, 2)
-texture = ExtResource("2_6oxh6")
+rotation = 1.5707964
+texture = ExtResource("2_ipiyc")
+flip_v = true
 region_enabled = true
-region_rect = Rect2(36, 24, 12, 12)
+region_rect = Rect2(128, 288, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-scale = Vector2(2, 2)
+position = Vector2(0, -2.4)
 shape = SubResource("CircleShape2D_q3m7n")

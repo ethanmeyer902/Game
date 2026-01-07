@@ -8,19 +8,17 @@ radius = 4.1231055
 
 [node name="EnemyProjectile" type="Area2D" groups=["projectile", "projectiles"]]
 z_index = 1
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 collision_layer = 16
 collision_mask = 4
 script = ExtResource("1_e8ik0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(2, 2)
 texture = ExtResource("2_j7vux")
 region_enabled = true
 region_rect = Rect2(36, 24, 12, 12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
-scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_q3m7n")

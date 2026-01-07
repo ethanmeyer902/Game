@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var monster_id: String = "mush_buddy"
+@export var monster_id: String = "ghost_buddy"
 @export var orbit_radius: float = 40.0
 @export var orbit_speed: float = 3.0
 @export var attack_range: float = 450.0
