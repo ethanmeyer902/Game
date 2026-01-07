@@ -14,10 +14,3 @@ func _physics_process(_delta: float) -> void:
 
 	velocity = input_dir * speed
 	move_and_slide()
-
-	if Input.is_action_just_pressed("attack"):
-		do_attack()
-
-func do_attack() -> void:
-	# For now, just print. Later you can spawn a swing or projectile.
-	print("Player attack, facing: ", facing)
